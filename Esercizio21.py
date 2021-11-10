@@ -1,0 +1,10 @@
+import math
+x=float(input("Dammi la prima coordinata: "))
+y=float(input("Dammi la seconda coordinata: "))
+print("Secondo punto\n")
+x2=float(input("Dammi la prima coordinata"))
+y2=float(input("Dammi la seconda coordinata: "))
+coordinateX=(x, x2)
+coordinateY=(y, y2)
+ipotenusa=math.sqrt((coordinateX[0]-coordinateX[1])**2 + (coordinateY[0]-coordinateY[1])**2)
+print(ipotenusa)
