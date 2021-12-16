@@ -1,4 +1,4 @@
-ciao
-luigi
-cara
-pierluigi
+c***,2
+c**,2
+p**,3
+p****,1
