@@ -12,5 +12,5 @@ def permutaLista(l):
     return l
 
 lista=[1,2,3,4]
-lista=permutaLista(lista)
+lista=permutaLista(lista)#random.shuffle(lista)
 print(lista)

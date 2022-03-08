@@ -5,6 +5,30 @@
 #spesa ottenuta sommando i prezzi dei generi alimentari scelti.
 #Calcola mese / anno in cui la tua spesa ha costi minimi e massimi.
 
-prodotti=["Acqua minerale (cl. 900)","Birra nazionale (cl. 100)","Biscotti frollini (gr. 1000)"]
-f=open("./prezzi.txt","r")
-testo=str(f.readlines())
+def main():
+    prezzo_spesa=[]
+    mesi=[]
+    prodotti=[]
+    f=open("./prezzi.txt","r")
+
+    testo=f.readline()
+    prodot=testo.split(";")
+    prodot.pop(0)
+    prodot.pop(0)
+    for l in prodot:
+        prodotti.append(l)
+
+    testo=f.readlines()
+    for riga in testo:
+        somma=0
+        campi=riga.split(";")
+        mesi.append(campi[1]+campi[0])
+        campi.pop(0)
+        campi.pop(0)
+        for l in range(len(prodotti)-2):
+            somma+=float(campi[l])
+            prezzo_spesa.append(somma)
+    print(prezzo_spesa)
+
+if __name__ =="__main__":
+    main()

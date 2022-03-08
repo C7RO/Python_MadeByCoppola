@@ -85,7 +85,7 @@ def isLibera(campo, n, c):
         k-=1
     return k
 
-n=5#Changing this little number you can choise the size of the map
+n=9#Changing this little number you can choise the size of the map
 campo= formattaCampo(n)
 partitaFinita=False
 car1="X"

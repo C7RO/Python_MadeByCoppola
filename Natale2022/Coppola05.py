@@ -7,13 +7,17 @@
 f=open("./main.c","r")
 testo=str(f.readlines())
 contaRighe=0
-contaPrint=1
+contaPrint=0
+contaCommenti=0
 for n,l in enumerate(testo):
     if testo[n:n+2]=="\\n":
         contaRighe+=1
     if testo[n:n+6]=="printf":
         contaPrint+=1
+    if testo[n:n+2]== "//" or testo[n:n+2]=="/*":
+        contaCommenti+=1
 
 print(contaRighe)
 print(contaPrint)
+print(contaCommenti)
 f.close()
